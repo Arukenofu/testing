@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: #0a0a0a;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+  color: #dcdcdc;
+}
+
+:root {
+  --padding: 160px;
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --padding: 80px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --padding: 42px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  :root {
+    --padding: 36px;
+  }
+
+  body {
+    font-size: 12.5px;
+  }
+}
