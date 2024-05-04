@@ -29,6 +29,27 @@ const getAll = computed(() => {
   return total
 })
 
+const levels = [
+    1000,
+    4000,
+    10000,
+    22000,
+    40000,
+    72000,
+    120000,
+    200000
+]
+
+const getCollectionLevel = () => {
+  for (let i = 0; i < levels.length; i++) {
+    if (getAll.value < levels[i]) {
+      return i;
+    }
+  }
+  return levels.length;
+}
+
+
 
 
 </script>
@@ -108,11 +129,11 @@ const getAll = computed(() => {
         v-model="inputs.common"
     >
 
-    <label>Текущее количество очков: {{getAll}}</label>
+    <label>Текущее количество очков: {{getAll}} </label>
 
-    <button>
-      Узнать
-    </button>
+    <label class="chtotitutdelaesh">
+      Ваш уровень коллекции: {{getCollectionLevel()}}
+    </label>
 
 
   </div>
@@ -181,7 +202,6 @@ const getAll = computed(() => {
   label {
     display: block;
     font-size: 1.1em;
-    margin-bottom: 14px;
   }
 
   button {
@@ -202,5 +222,9 @@ const getAll = computed(() => {
       opacity: 0.9;
     }
   }
+}
+
+.chtotitutdelaesh {
+  font-weight: 800;
 }
 </style>
