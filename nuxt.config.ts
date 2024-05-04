@@ -8,5 +8,9 @@ export default defineNuxtConfig({
     families: {
       'Nunito Sans': '200..900',
     }
+  },
+  app: {
+    baseURL: '/testing/',
+    buildAssetsDir: 'assets'
   }
 })
